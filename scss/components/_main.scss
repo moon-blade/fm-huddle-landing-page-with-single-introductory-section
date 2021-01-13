@@ -1,0 +1,98 @@
+.content {
+  text-align: center;
+
+  @include breakpoint-up(medium) {
+    margin-top: 6.5rem;
+    margin-bottom: 1.75rem;
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 3.75rem;
+
+    &__left {
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+  &__image {
+    margin-top: 4.375rem;
+    margin-bottom: 4.375rem;
+
+    @include breakpoint-up(medium) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    img {
+      max-width: 18.75rem;
+      max-height: 13.125rem;
+
+      @include breakpoint-up(large) {
+        max-width: 36.5rem;
+        max-height: 26rem;
+      }
+    }
+  }
+  &__heading {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1;
+    h1:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+
+    @include breakpoint-up(medium) {
+      font-size: 0.9375rem;
+      text-align: left;
+      line-height: 1.25;
+    }
+  }
+  &__text {
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.75;
+    margin-top: 1.875rem;
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+      margin-top: 2.625rem;
+    }
+  }
+  &__button {
+    margin-top: 1.625rem;
+
+    @include breakpoint-up(large) {
+      margin-top: 1.75rem;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #ffffff;
+      color: $violet;
+      text-decoration: none;
+      min-width: 200px;
+      max-width: 200px;
+      padding: 1.0625rem 2.0625rem 1.0625rem 2.0625rem;
+      font-family: "Open Sans", sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 400;
+      border: none;
+      border-radius: 50px;
+      transition: background-color 100ms ease-in-out;
+
+      @include breakpoint-up(medium) {
+        font-size: 1rem;
+      }
+
+      &:hover {
+        background-color: $softMagenta;
+        color: #fff;
+      }
+    }
+  }
+}

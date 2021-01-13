@@ -1,0 +1,13 @@
+body {
+  background-color: $violet;
+  padding: 2.5rem;
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include breakpoint-up(medium) {
+    padding: 4rem 5rem 2.5rem 2.5rem;
+    background-image: url(../images/bg-desktop.svg);
+    background-size: cover;
+    background-position: -6rem 0;
+  }
+}
